@@ -11,7 +11,7 @@ public class binarysearch3 {
             arr[i] = scn.nextInt();
         }
         int ans = weDoNotKnow(arr,target);
-        System.out.println("ans mil gya" +ans);
+        System.out.println("ans mil gya:-" +ans);
     }
     static int weDoNotKnow(int[] arr, int target){
         int start = 0, end = arr.length-1;
