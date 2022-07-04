@@ -20,7 +20,7 @@ public class binarysearch3 {
             int mid = start + (end-start)/2;
             if(arr[mid]==target)
                 return mid;
-            if(Asc){                                            // if array is in ascending order(1 2 3)
+            if(Asc){                                            //  checking here if array is in ascending order(1 2 3)
                 if(arr[mid]<target){
                     start = mid+1;
                 }
@@ -28,7 +28,7 @@ public class binarysearch3 {
                     end = mid-1;
                 }
             }else{
-                if(arr[mid]<target){    // if array is in descending order (3 2 1)
+                if(arr[mid]<target){    //  checking here if array is in descending order (3 2 1)
                     end = mid-1;
                 }
                 else{
