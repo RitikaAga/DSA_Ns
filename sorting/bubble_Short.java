@@ -6,8 +6,8 @@ public class Main
 {
 	public static void main(String[] args) {
 	Scanner sc = new Scanner(System.in);
-	int n = sc.nextInt();    
-	int arr[] = new int[n];
+	int n = sc.nextInt();    // number of element that we want in array
+	int arr[] = new int[n];                         
 	for(int i =0;i<n;i++){                         // this loop will insert the array element
 	    arr[i]= sc.nextInt();
 	}
