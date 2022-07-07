@@ -1,7 +1,7 @@
 // in Selection sort 1st we check the very min value in array when we find it then we swap it with index 0
 // then again we will find 2nd min value then we will swap it with index 1 
 // same will happen until the array will not short
-// tc = n^2 in every case
+// tc = O(n^2) in every case
 
 import java.util.*;
 public class Main{
