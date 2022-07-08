@@ -1,5 +1,6 @@
 // Bubble shorting is a technique in which we compare 1st element to 2nd element if 1st element is > then 2nd element then it swap place 
 // when 1st pass will complete then the shorting will start from 2nd element 
+// Tc = O(n) in best case O(n^2) in average and worst case 
 
 import java.util.*;
 public class Main
