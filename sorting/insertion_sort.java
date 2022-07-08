@@ -19,10 +19,10 @@ public class Main{
 	    System.out.print(arr[i] +" ");
 	}
 	     // from here we start searching from insertion sort
-	for(int i =0;i<n;i++)
+	for(int i =1;i<n;i++)
 { 
   int key = arr[i];
-  int j = 1-i;     // the ending of shorted array
+  int j = i-1;     // the ending of shorted array
   while(j>=0 && arr[j]>key){
       arr[j+1] = arr[j];
       j = j-1;
