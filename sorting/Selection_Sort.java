@@ -16,7 +16,7 @@ public class Main{
 	    System.out.print(arr[i] +" ");
 	    }
 	    // from here we start searching from selection sort
-for(int i = 0; i<n-1;i++)
+for(int i = 0; i<n-1;i++)   // for 5 element's array only 4 passes are needed that's wht we use n-1 here
 { 
   int Min_Index = i;
     for(int j = i+1;j<n;j++){       //This loop is comparing value to find  min index
