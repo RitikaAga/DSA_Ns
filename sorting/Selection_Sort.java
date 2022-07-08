@@ -19,7 +19,7 @@ public class Main{
 for(int i = 0; i<n-1;i++)
 { 
   int Min_Index = i;
-    for(int j = i+1;j<n;j++){    
+    for(int j = i+1;j<n;j++){       //This loop is comparing value to find  min index
         if(arr[j]<arr[Min_Index]){
            Min_Index = j;
          }
