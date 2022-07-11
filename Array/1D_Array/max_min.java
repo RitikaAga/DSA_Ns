@@ -12,12 +12,12 @@ public class Main {
           if(a[i]>max){
               max = a[i];
               }}
-          System.out.println(max);
+          System.out.println("Maximum number in array is "+max);
           int min = a[0];
           for(int i =0;i<n;i++){
          if(a[i]<min){
               min = a[i];
               }}
-              System.out.println(min);
+              System.out.println("Mininmum number in array is "+min);
     }
 }
