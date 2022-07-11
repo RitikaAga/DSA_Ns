@@ -18,6 +18,6 @@ public class Main {
          if(a[i]<min){
               min = a[i];
               }}
-              System.out.println("Mininmum number in array is "+min);
+              System.out.println("Minimum number in array is "+min);
     }
 }
