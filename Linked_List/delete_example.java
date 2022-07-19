@@ -10,8 +10,7 @@ class Node
  class LinkedList
   {
      Node head;
-     int size = 0;
-   
+
      void insert(int data)
      {
         Node newNode = new Node(data);
@@ -27,13 +26,11 @@ class Node
                }
                curr.next = newNode;
         }
-        size++;
       }
      void addFirst(int data){                 // will add first node
          Node newNode = new Node(data);
          newNode.next = head;
          head = newNode;
-         size++;
        }
    
       
@@ -57,7 +54,7 @@ class Node
           }
        }
        
-       void deleteNode(int data){   // if you want to delete at perticular node 
+       void deleteNode(int data){   // if you want to delete a perticular node 
          if(head.data == data)
          deleteHead();
          else{
@@ -86,7 +83,40 @@ class Node
                 curr.next = null;
            }
        }
-   }
+       
+       void deleteByPos(int pos){      // // if we want to delete node at perticular position 
+          Node curr = head;
+          
+          if(pos == 1)
+          deleteHead();
+           while(pos-- > 2 && curr != null){
+               curr = curr.next;
+           }
+           if(curr != null && curr.next != null){
+               curr.next = curr.next.next;
+           }
+       }
+       
+        void updateData(int oldData, int newData){    // it will update old data into new data
+            Node curr = head;
+            while(curr != null && curr.data != oldData){
+               curr = curr.next; 
+            }
+            if(curr != null)
+            curr.data = newData;
+             }
+             
+             boolean containData(int data){
+                 Node curr =  head;
+                 while(curr != null){
+                     if(curr.data == data)
+                     return true;
+                     else 
+                     curr = curr.next;
+                 }
+                 return false;
+             }
+    }
 
 public class Example {
 	public static void main (String[] args) {
@@ -97,15 +127,27 @@ public class Example {
 	    l.insert(2);
 	   l.insert(5);
 	    l.insert(4);
-	    l.printList();
+	    l.insert(3);
+	    l.insert(8);
+	    l.printList();      // result :  6 7 1 2 5 4 3 8
 	    
 	    l.deleteHead();      // will detele head
-	    l.printList();
+	    l.printList();         // 7 1 2 5 4 3 8
 	    
 	    l.deleteNode(4);     //will delete perticular node 
-	     l.printList();
+	     l.printList();         // result  7 1 2 5 3 8 
 	     
 	     l.deleteLast(); // will delete last node  
-	     l.printList();
+	     l.printList();         //  result 7 1 2 5 3 
+	     
+	     l.deleteByPos(2); // if we want to delete node at perticular position 
+	     l.printList();     //   result 7 2 5 3
+	     
+	     l.updateData(2,6); // it will update old data into new data    
+	     l.printList();         //  result 7 6 5 3 
+	     
+	    System.out.println(l.containData(6));    // true
+        System.out.println(l.containData(2));    // false
 	}
 }
+   
