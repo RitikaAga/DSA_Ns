@@ -20,3 +20,25 @@ for(int i =0;i<n;i++){
    System.out.println("3rd max number is at: "+ arr[2]);
     }
 }
+
+// 2nd approach
+// finding of 2nd max element can be done in O(N) tc and we also have no need of extra space here
+//  N is the size of array that we are taking and by X we will gtake user value of array
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+      Scanner sc = new Scanner(System.in);
+      int max1 = 0, max2=0;
+      int n = sc.nextInt();
+        for(int i = 0;i<n;i++){
+          int x = sc.nextInt();
+            if(max1 < x){
+              max2 = max1;
+              max1 = x;
+            }else if(max2< x){
+              max2= x;
+            }
+        }
+        System.out.println(max1+" "+max2);
+      }
+    }
