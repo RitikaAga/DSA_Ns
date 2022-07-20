@@ -23,7 +23,7 @@ for(int i =0;i<n;i++){
 
 // 2nd approach
 // finding of 2nd max element can be done in O(N) tc and we also have no need of extra space here
-//  N is the size of array that we are taking and by X we will gtake user value of array
+//  N is the size of array that we are taking and by X we will take user value of array
 import java.util.*;
 public class Main{
     public static void main(String args[]){
