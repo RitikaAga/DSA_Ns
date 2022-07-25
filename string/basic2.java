@@ -1,5 +1,6 @@
 //  Strings are immutable we can not modity or change it 
 //if we want to modify it so we have to create a new string 
+// operation perform - char at index 0 ,set char at index 0 , insert char at some position ,delete char at some position
 
 import java.util.*;
 public class Main{
