@@ -1,3 +1,6 @@
+// while fuction implimentation we are doing +32 and -32 ikn fuction we are doing so bcoz the difference between A and a is 32.
+
+
 public class MyClass {
     public static void main(String args[]) {
      String s1 = "NeWtOn";
