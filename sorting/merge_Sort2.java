@@ -1,3 +1,65 @@
+import java.util.*;
+
+class Main{
+    static int[] conqure(int[] left, int[] right){
+        
+        int i=0;
+        int j=0;
+        int k=0;
+        int[] merged = new int[left.length + right.length];
+        
+        while(i<left.length && j<right.length){
+            if(left[i] <= right[j]){
+                merged[k] = left[i];
+                k++;
+                i++;
+            }
+            else{
+                merged[k] = right[j];
+                k++;
+                j++;
+            }
+        }
+        while(i<left.length){
+            merged[k] = left[i];
+            k++;
+            i++;
+            
+        }
+        while(j<right.length){
+            merged[k] = right[j];
+            k++;
+            j++;
+        }
+        return merged;
+    }
+    static int[] devide(int[] arr, int lo, int hi){
+        if(lo==hi){
+            int[] base = new int[1];
+            base[0] = arr[lo];
+            return base;
+        }
+        int mid = lo + (hi-lo)/2;
+        int[] left = devide(arr, lo, mid);
+        int[] right = devide(arr, mid+1, hi);
+        
+        int[] merged = conqure(left, right);
+        
+        return merged;
+    }
+    public static void main(String[] args){
+       Scanner sc = new Scanner(System.in);
+       int n = sc.nextInt();
+       int[] arr = new int[n];
+       for(int i=0; i<n; i++){
+           arr[i] = sc.nextInt();
+       }  
+       
+     System.out.println(Arrays.toString(devide(arr, 0, n-1)));
+    }
+}
+
+// 2nd approach
 import java.util.Scanner;
 
 public class Main {
