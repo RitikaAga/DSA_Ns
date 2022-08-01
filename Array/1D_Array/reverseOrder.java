@@ -40,3 +40,22 @@ public class Main {
 
     }
 }
+
+
+// 3rd approach
+
+static void reverse(int[]arr,int l){
+        int a =l/2;
+        for(int i=0;i<a;i++){
+            int any = arr[i];
+            arr[i] = arr[l-i-1];
+            arr[l-i-1] = any;
+        }
+        System.out.println();
+            System.out.println("Reversed array is =");
+        for(int elemnt :arr){
+            System.out.print(elemnt+" ");
+        }
+            System.out.println();
+        }
+    }
