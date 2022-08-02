@@ -33,6 +33,17 @@ public class Main {
             }
         }
         return -1;
+        
+        
+        // 2nd approach
+        
+        for(int i = 0;i<arr.length;i++){
+            if(arr[i] == target){
+                return i;
+            }
+              }
+         return -1; 
+    }}
     }
     static int binarySearch(int[] arr, int start, int end, int target){
         while(start<=end){
