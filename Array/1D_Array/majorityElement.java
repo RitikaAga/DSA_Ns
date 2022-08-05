@@ -28,3 +28,11 @@ class Solution
             if(a[i]==value){
                 count++;
             }
+         
+        }
+           if(count>size/2){
+            return value;
+        }
+        return -1;
+    }
+}
