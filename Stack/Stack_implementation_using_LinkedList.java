@@ -1,61 +1,61 @@
 //stack using Linked List
-public class StackDS {
-    private static class Node {
-        int data;
-        Node next;
-
-        Node(int data) {
-            this.data = data;
-            next = null;
-        }
-    }
-
-    static class Stack {
-        public static Node head = null;
-        
-        public static void push(int data) {
-            Node newNode = new Node(data);
-
-            if(head == null) {
-                head = newNode;
-                return;
-            }
-            newNode.next = head;
+class Node{
+    int data;
+    Node next;
+    
+     Node(int data){
+         this.data = data;
+         next = null;
+     }
+}
+class Stack1{
+    
+     Node head = null;
+    
+    public Node push(int data){
+        Node newNode = new Node(data);
+        if(head == null){
             head = newNode;
+            return head;
         }
-
-        public static boolean isEmpty() {
-            return head == null;
-        }
-
-        public static int pop() {
-            if(isEmpty()) {
-                return -1;
-            }
-            Node top = head;
-            head = head.next;
-            return top.data;
-        }
-
-        public static int peek() {
-            if(isEmpty()) {
-                return -1;
-            }
-            Node top = head;
-            return top.data;
+        newNode.next = head;
+        head = newNode;
+        return head;
+    }
+    
+    public boolean isEmpty(){
+        
+        if( head == null)
+        return true;
+        else{
+            return false;
         }
     }
-
-    public static void main(String args[]) {
-        Stack stack = new Stack();
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
-        stack.push(4);
-
-        while(!stack.isEmpty()) {
-            System.out.println(stack.peek());
-            stack.pop();
-        }
+    public int pop(){
+      if(isEmpty()){
+          return -1;
+      }  
+      Node top = head;
+      head = head.next;
+      return top.data;
     }
+    public int peek(){
+        if(isEmpty()){
+            return -1;
+        }
+        Node top = head;
+        return top.data;
+    }
+}
+public class Main{
+public static void main(String[] args){
+    Stack1 st = new Stack1();
+    st.push(1);
+    st.push(2);
+    st.push(3);
+    st.push(4);
+     System.out.println(st.isEmpty());
+         System.out.println(st.peek());
+         st.pop();
+     }
 }
