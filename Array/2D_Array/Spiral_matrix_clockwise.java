@@ -1,5 +1,5 @@
 import java.util.*;
-class Main {
+public class Main {
     public static void main (String[] args) {
           Scanner sc = new Scanner(System.in);
           int m = sc.nextInt();
@@ -33,7 +33,7 @@ class Main {
                  }
                  m--;
              }
-         }
+         
          if(l<n)
          {
              for( i =m-1;i>=k;--i)
@@ -41,6 +41,7 @@ class Main {
                 System.out.print(a[i][l] + " ");
              }
              l++;
+         }
          }
     }     
 }
