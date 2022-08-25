@@ -1,4 +1,6 @@
 // given a string ,remove all the occerance of a's and z's from it
+//  Time Complexity : O(n) where n is length of input string. 
+// Auxiliary Space : O(1)
 
 class Main{
 static void removeChar(String s, char c,char b  )
