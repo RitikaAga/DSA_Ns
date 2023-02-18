@@ -26,3 +26,23 @@ public class StringPalindrome {
       }
    }
 }
+
+
+
+//2 Pointer
+
+function pal(str){
+let s = 0;
+let e = str.length-1;
+while(s<e){
+if(str[s]==str[e]){
+s++;
+e--;
+}else{
+console.log("Not Pal")
+break;
+}}
+if(s>=e){
+console.log("Pal")
+}}
+pal("11221")
