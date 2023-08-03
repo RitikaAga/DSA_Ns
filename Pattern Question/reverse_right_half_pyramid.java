@@ -1,5 +1,11 @@
 //using while loop
+// Print the following pattern using for loop
 
+// *****
+// ****
+// ***
+// **
+// *
 import java.util.*;
 public class Main
 {
