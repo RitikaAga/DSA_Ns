@@ -24,9 +24,10 @@ public class binarysearch2
 
             if(arr[mid]==target){
                 temp = mid; // this might be my potential ans
-                // return mid why ? because array used to have unique elements
+ // return mid why ? because array used to have unique elements
                 end = mid - 1;
-                // if we want to find last occaurence then we have to change code form end = mid -1; to start = mid +1;
+// if we want to find last occaurence then we have to change
+//code form end = mid -1; to start = mid +1;
             }
             else if(arr[mid]<target){
                 start = mid+1;
